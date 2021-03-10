@@ -6,7 +6,7 @@ const hbs = require('hbs')
 
 const port = process.env.PORT || 3000
 
-mongoose.connect('mongodb://127.0.0.1:27017/song-db', {
+mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
